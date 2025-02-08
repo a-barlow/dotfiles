@@ -1,0 +1,4 @@
+# Enviroment profiles to set
+export ZK_NOTEBOOK_DIR=$HOME/
+export XDG_CONFIG_HOME=$HOME/.config
+export DOTFILES=$HOME/.dotfiles

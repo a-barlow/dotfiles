@@ -1,0 +1,22 @@
+# Install bat, alternative to cat
+# https://github.com/sharkdp/bat
+
+.PHONY install 
+
+# Detect the operating system
+OS := ${OSTYPE}
+
+# Define the package manager and install command based on the OS
+ifeq ($(OS),linux-gnu*)
+    PKG_MANAGER := sudo apt install
+else ifeq ($(OS),darwin*)
+    PKG_MANAGER := brew install
+else
+    $(error Unsupported operating system)
+endif
+
+install:
+  $(PKG_MANAGER) bat
+  bat cache --build
+
+

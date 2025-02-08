@@ -1,0 +1,16 @@
+[user]
+
+name = Barlow, Andrew
+email = a.barlow.dev@gmail.com
+
+[init]
+defaultbranch = main
+
+[core]
+editor = nvim
+
+[alias]
+
+co = checkout
+br = branch
+ci = commit

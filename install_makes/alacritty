@@ -1,0 +1,9 @@
+// Install alacritty using cargo
+// https://alacritty.org/index.html
+
+.PHONY install 
+
+install:
+  cargo install alacritty
+
+

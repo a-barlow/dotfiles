@@ -1,0 +1,7 @@
+// Installs python 3.13 with venv
+// https://www.python.org/
+
+.PHONY install 
+
+install:
+  install_package python3.13-venv

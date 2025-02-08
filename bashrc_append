@@ -1,0 +1,5 @@
+# Aliases
+alias editalias="nvim $HOME/.bash_profile"
+alias ll="ls -l"
+alias la="ls -al"
+alias dotfiles='git --git-dir=$HOME/.dotfiles/'
