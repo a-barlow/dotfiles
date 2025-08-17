@@ -1,0 +1,9 @@
+# Install the python manager
+# https://docs.astral.sh/uv/
+
+version: 3
+
+tasks:
+  default:
+    cmds:
+      - curl -LsSf https://astral.sh/uv/install.sh | sh

@@ -1,0 +1,14 @@
+# Installs the rm-improved package
+# https://github.com/nivekuil/rip
+
+version: 3
+
+includes:
+  setup: ./Taskfile.rust.yml
+
+tasks:
+  default:
+    deps:
+      - setup
+    cmd:
+      - cargo install rm-improved

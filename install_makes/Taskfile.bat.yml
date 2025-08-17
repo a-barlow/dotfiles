@@ -1,0 +1,15 @@
+# Install bat, alternative to cat
+# https://github.com/sharkdp/bat
+
+version: 3
+
+includes:
+  setup: ./Taskfile.rust.yml
+
+tasks:
+  default:
+    deps:
+      - setup
+    cmds:
+      - cargo install --locked bat
+      - bat --completion bash

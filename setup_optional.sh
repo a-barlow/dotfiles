@@ -7,7 +7,7 @@ install_program() {
   select yn in "Yes" "No"; do
     case $yn in
     Yes)
-      make -f install_makes/$1 install
+      task --taskfile Taskfile.$1.yml
       break
       ;;
     No) break ;;

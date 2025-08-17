@@ -1,0 +1,10 @@
+# Installs Rust via rustup
+# https://www.rust-lang.org/
+
+version: 3
+
+tasks:
+  default:
+    cmds:
+      - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      - echo '. "$HOME/.cargo/env"' >> $HOME/.bash_profile

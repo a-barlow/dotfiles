@@ -1,0 +1,29 @@
+# Installs neovim, the lazyvim config is symlinked
+# https://neovim.io/
+# https://www.lazyvim.org/
+
+version: 3
+
+tasks:
+  default:
+    deps:
+      - install:bat:macos
+      - install:bat:ubuntu
+
+  install:bat:macos:
+    platforms: [darwin]
+    cmds:
+      - curl -LO
+        https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-x86_64.tar.gz
+      - tar xzf nvim-macos-x86_64.tar.gz
+      - mv ./nvim-macos-x86_64 $HOME/Library
+      - ln -s $HOME/Library/nvim-macos-x86_64/bin/nvim $HOME/.local/bin/nvim
+
+  install:bat:ubuntu:
+    platforms: [linux]
+    cmds:
+      - curl -LO
+        https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+      - tar -C $HOME/.local/lib -xzf nvim-linux-x86_64.tar.gz
+      - rm nvim-linux-x86_64.tar.gz
+      - ln -s $HOME/.local/lib/nvim-linux-x86_64/bin/nvim

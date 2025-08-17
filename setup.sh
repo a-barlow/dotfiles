@@ -60,11 +60,13 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   sudo add-apt-repository -y 'ppa:deadsnakes/ppa'
   # Adds make and gcc
   sudo apt install -y build-essentials
+  sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b ~/.local/bin # Installs go-task
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   echo "[DOTFILES SETUP] Detected MacOS system."
   unzip ${font} -d $HOME/Library/Fonts/
   PACKAGE_MANAGER="brew install"
   brew install gcc
+  brew install go-task
 else
   echo "[DOTFILES SETUP] Unsupported operating system."
   exit 1
@@ -89,9 +91,6 @@ stow $HOME/dotfiles/dotfiles/ $HOME/
 
 # Install curl
 install_package curl
-
-# Installs make
-install_package make
 
 # Install programs listed in install_makes dir/, with user's permission
 ./setup_optional.sh

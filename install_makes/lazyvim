@@ -1,9 +1,0 @@
-// Installs neovim, the lazyvim config is symlinked
-// https://neovim.io/
-// https://www.lazyvim.org/
-
-.PHONY install 
-
-install:
-  install_package neovim
-

@@ -1,7 +1,0 @@
-// Installs the rm-improved package
-// https://github.com/nivekuil/rip
-
-.PHONY install 
-
-install:
-  cargo install rm-improved

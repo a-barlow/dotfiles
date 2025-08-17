@@ -1,0 +1,10 @@
+# Installs the cross-shell prompt helper starship
+# https://starship.rs/
+
+version: 3
+
+tasks:
+  default:
+    cmds:
+      - curl -sS https://starship.rs/install.sh | sh
+      - echo 'eval "$(starship init bash)"' >> $HOME/.bashrc
